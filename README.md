@@ -1,2 +1,4 @@
-# CV_HTML_CSS
-Examen Progra Web 5-6pm
+# CV Isaac Guzmán con HTML y CSS
+Programación Web 5-6pm
+
+Link a github pages: 
