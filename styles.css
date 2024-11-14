@@ -1,0 +1,230 @@
+/* basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Nav */
+nav {
+    background-color: #333;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Secciones */
+section {
+    padding: 2em 1em;
+    max-width: 800px;
+    margin: auto;
+}
+
+section:nth-of-type(odd) {
+    background-color: #fafafa;
+}
+
+section:nth-of-type(even) {
+    background-color: #e3e3e3;
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+section h3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+audio, video {
+    display: block;
+    margin: 1em auto;
+}
+
+/* Historial */
+#historial ul {
+    list-style-type: disc;
+    padding-left: 2em;
+}
+
+#historial ul li {
+    margin-bottom: 0.5em;
+}
+
+/* Habilidades - Bento Grid */
+#habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin-top: 1em;
+    text-align: center;
+    grid-auto-rows: 150px;
+}
+
+#habilidades p {
+    grid-column: span 3;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Bento Grid Items */
+.bento-item {
+    background-color: #eaeaea;
+    padding: 1em;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    height: 100%;
+    min-height: 50px;
+    max-height: 200px;
+    width: 100%;
+}
+
+/* Responsividad para Bento Grid */
+@media (max-width: 768px) {
+    #habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    #habilidades {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Formulario de Contacto */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* Cambiar el tamaño del botón */
+form button {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto; /* Cambiar a ancho automático */
+    padding: 0.5em 1em; /* Ajustar el padding para hacerlo más pequeño */
+    margin: 0 auto; /* Centrar el botón */
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Responsividad para el grid */
+.grid-container {
+    display: grid;
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 10px; /* Espacio interno */
+}
+
+/* Estilo para los elementos del grid */
+.grid-item {
+    background-color: #d3d3d3; /* Color de fondo gris claro */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
+    border: 2px solid #a9a9a9; /* Borde gris oscuro */
+    transition: background-color 0.3s ease; /* Transición suave */
+    font-size: 1.2em; /* Tamaño de fuente */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluye padding y border en el ancho */
+}
+
+.grid-item:hover {
+    background-color: #b0b0b0; /* Color de fondo gris medio al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+}
+
+/* Nuevo estilo para un elemento que ocupa dos espacios de ancho */
+.grid-item-wide {
+    grid-column: span 2; /* Ocupa dos columnas */
+}
+
+/* Nuevo estilo para un elemento que ocupa dos espacios de largo */
+.grid-item-tall {
+    grid-row: span 2; /* Ocupa dos filas */
+}
+
+/* Responsividad para el grid */
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+}
